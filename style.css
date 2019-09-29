@@ -1,0 +1,78 @@
+body {
+	margin : 0;
+	padding : 0;
+	background-color : beige;
+}
+
+#menu {
+	border: 1px solid white;
+	background-color : black;
+	height : 50px;
+
+}
+
+ul li {
+	float : left;
+	list-style-type: none;
+}
+
+#menu a {
+	border : 1px solid white;
+	padding:17px 10px;
+	width : 20%;
+	text-decoration: none;
+	text-align: center;
+	color: cyan;
+}
+
+img {
+	width : 100%;
+}
+
+#about_my,#projects,#contacts {
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border:1px solid red;
+	width:50%;
+	height:300px;
+	text-align:center;
+	font-family: 'Big Shoulders Text', cursive;
+
+}
+
+h2 {
+
+}
+
+#projects div{
+	outline:1px solid green;
+	width:30%;
+	height:100px;
+	float:left;
+	margin-left: 2.5%;
+	margin-bottom:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
