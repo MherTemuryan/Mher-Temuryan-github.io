@@ -6,9 +6,8 @@ body {
 
 #menu {
 	border: 1px solid white;
-	background-color : black;
+	background-color : gray;
 	height : 50px;
-
 }
 
 ul li {
@@ -25,54 +24,34 @@ ul li {
 	color: cyan;
 }
 
+h2 {
+	color: magenta;
+}
+
 img {
 	width : 100%;
 }
 
 #about_my,#projects,#contacts {
-	margin: 0 auto;
+	margin:0 auto;
 	margin-bottom: 20px;
-	border:1px solid red;
-	width:50%;
-	height:300px;
+	padding: 10px 50px;
+	background-color: #e4e4cd;
+	width:90%;
 	text-align:center;
 	font-family: 'Big Shoulders Text', cursive;
-
-}
-
-h2 {
-
+	position:relativ;
 }
 
 #projects div{
-	outline:1px solid green;
-	width:30%;
-	height:100px;
-	float:left;
-	margin-left: 2.5%;
-	margin-bottom:10px;
+	border:1px solid #b8bdd4;
+	display: inline-block;
+	width: 300px;
+	height: 210px;
+	margin: 15px;
+	position: relative;	
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#contacts a {
+	text-decoration:none;
+}
