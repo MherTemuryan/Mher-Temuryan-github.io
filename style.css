@@ -13,9 +13,9 @@ body {
     border: 1px solid white;
     background-color: gray;
     height: 60px;
-    display: flex; /* Добавлено для выравнивания элементов по горизонтали */
-    justify-content: space-between; /* Расстояние между элементами */
-    align-items: center; /* Вертикальное выравнивание по центру */
+    display: flex;
+    justify-content: center; /* Центрируем меню */
+    align-items: center; /* Выравнивание по вертикали */
 }
 
 ul {
@@ -26,14 +26,23 @@ ul {
 
 ul li {
     list-style-type: none;
+    margin: 0 15px; /* Отступы между пунктами меню */
 }
 
 #menu a {
     border: 1px solid white;
-    padding: 17px 10px;
+    padding: 17px 20px;
     text-decoration: none;
     text-align: center;
     color: cyan;
+    font-weight: bold;
+    border-radius: 5px; /* Скругление углов для кнопок меню */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход */
+}
+
+#menu a:hover {
+    background-color: cyan; /* Цвет фона при наведении */
+    color: black; /* Цвет текста при наведении */
 }
 
 h2 {
