@@ -13,10 +13,18 @@ body {
     border: 1px solid white;
     background-color: gray;
     height: 60px;
+    display: flex; /* Добавлено для выравнивания элементов по горизонтали */
+    justify-content: space-between; /* Расстояние между элементами */
+    align-items: center; /* Вертикальное выравнивание по центру */
+}
+
+ul {
+    display: flex; /* Горизонтальное расположение пунктов меню */
+    padding: 0;
+    margin: 0;
 }
 
 ul li {
-    float: left;
     list-style-type: none;
 }
 
@@ -26,7 +34,6 @@ ul li {
     text-decoration: none;
     text-align: center;
     color: cyan;
-    display: inline-block;
 }
 
 h2 {
@@ -49,14 +56,9 @@ img {
     position: relative;
 }
 
-#education, #projects, #contacts {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 #projects div {
     border: 1px solid #b8bdd4;
+    display: inline-block;
     width: 300px;
     height: 210px;
     margin: 15px;
@@ -66,21 +68,3 @@ img {
 #contacts a {
     text-decoration: none;
 }
-
-@media (max-width: 768px) {
-    #menu a {
-        width: auto;
-        padding: 10px;
-    }
-
-    #education, #projects, #contacts {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    #projects div {
-        width: 100%;
-        height: auto;
-    }
-}
-
