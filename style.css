@@ -67,16 +67,17 @@ img {
 
 #projects {
     display: flex;
-    flex-wrap: wrap; /* Делаем так, чтобы блоки не выходили за пределы */
-    justify-content: center; /* Центрируем блоки */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Распределяем блоки равномерно */
 }
 
 #projects div {
     border: 1px solid #b8bdd4;
-    width: 300px;
+    width: calc(33% - 30px); /* Используем calc, чтобы учесть отступы */
     height: 210px;
     margin: 15px;
     position: relative;
+    box-sizing: border-box;
 }
 
 #contacts a {
@@ -86,17 +87,17 @@ img {
 /* Медиазапросы для мобильных устройств */
 @media screen and (max-width: 768px) {
     #projects {
-        flex-direction: column; /* Блоки становятся вертикальными на мобильных устройствах */
+        flex-direction: column; /* Строим блоки в колонку на мобильных устройствах */
     }
 
     #projects div {
-        width: 80%; /* Уменьшаем ширину блоков */
+        width: 90%; /* Блоки занимают 90% ширины */
         margin: 10px auto; /* Центрируем блоки */
     }
 }
 
 @media screen and (max-width: 480px) {
     #projects div {
-        width: 90%; /* Еще больше уменьшаем ширину блоков */
+        width: 95%; /* Еще больше уменьшаем ширину блоков */
     }
 }
