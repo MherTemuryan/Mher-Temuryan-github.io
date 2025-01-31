@@ -49,20 +49,24 @@ img {
     position: relative;
 }
 
+#education, #projects, #contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 #projects div {
     border: 1px solid #b8bdd4;
-    display: inline-block;
     width: 300px;
     height: 210px;
     margin: 15px;
-    position: relative;    
+    position: relative;
 }
 
 #contacts a {
     text-decoration: none;
 }
 
-/* Дополнительно: медиа-запрос для адаптивности */
 @media (max-width: 768px) {
     #menu a {
         width: auto;
@@ -70,7 +74,8 @@ img {
     }
 
     #education, #projects, #contacts {
-        width: 95%;
+        width: 100%;
+        flex-direction: column;
     }
 
     #projects div {
@@ -78,3 +83,4 @@ img {
         height: auto;
     }
 }
+
