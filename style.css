@@ -1,119 +1,166 @@
-* {
-    box-sizing: border-box;
-}
-
+/* Общие стили */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: beige;
     font-family: 'Chilanka', cursive;
-}
-
-#menu {
-    border: 1px solid white;
-    background-color: gray;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-ul {
-    display: flex;
-    padding: 0;
+    background-color: #f4f4f9;
     margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-ul li {
-    list-style-type: none;
-    margin: 0 15px;
+/* Контейнер для всей страницы */
+#pageWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Меню */
+#menu {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
 #menu a {
-    border: 1px solid white;
-    padding: 17px 20px;
+    color: white;
     text-decoration: none;
-    text-align: center;
-    color: cyan;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 18px;
 }
 
 #menu a:hover {
-    background-color: cyan;
-    color: black;
+    color: #f39c12;
 }
 
+/* Заголовки всех секций h2 */
 h2 {
+    font-size: 2.2em;
+    margin: 20px 0;
     color: magenta;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-#education, #projects, #contacts {
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 10px 50px;
-    background-color: #e4e4cd;
-    width: 90%;
+    font-weight: bold;
     text-align: center;
-    font-family: 'Big Shoulders Text', cursive;
-    position: relative;
 }
 
+/* Раздел Education and Skills */
+#education p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Проекты */
 #projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Распределяем блоки равномерно */
+    margin-top: 40px;
+    text-align: center;
 }
 
-#projects div {
-    border: 1px solid #b8bdd4;
-    width: calc(33% - 30px); /* Используем calc, чтобы учесть отступы */
-    height: 210px;
-    margin: 15px;
-    position: relative;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Стиль для каждого проекта */
+.project-item {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    padding: 10px;
+    transition: all 0.3s ease;
     box-sizing: border-box;
 }
 
+/* Изображение */
+.project-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Заголовок проекта */
+.project-item figcaption {
+    padding: 5px;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Описание проекта */
+.project-description {
+    font-size: 0.9em;
+    color: #666;
+    background-color: #f9f9f9;
+    padding: 8px;
+    text-align: center;
+    margin-top: 5px;
+    height: 50px;
+    overflow: hidden;
+}
+
+/* Эффект наведения на блок проекта */
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект на изображении при наведении */
+.project-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Раздел Contacts */
+#contacts {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#contacts p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
 #contacts a {
+    color: #f39c12;
     text-decoration: none;
 }
 
-/* Медиазапросы для мобильных устройств */
-@media screen and (max-width: 768px) {
-    #projects {
-        flex-direction: column; /* Строим блоки в колонку на мобильных устройствах */
-    }
+#contacts a:hover {
+    text-decoration: underline;
+}
 
-    #projects div {
-        width: 90%; /* Блоки занимают 90% ширины */
-        margin: 10px auto; /* Центрируем блоки */
+/* Прочие стили */
+a:focus, a:active {
+    outline: none;
+}
+
+/* Адаптивность для меньших экранов */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 480px) {
-    #projects div {
-        width: 95%; /* Еще больше уменьшаем ширину блоков */
-    }
-
-    #menu ul {
-        flex-direction: column; /* Меню становится вертикальным на мобильных устройствах */
-    }
-
-    #menu ul li {
-        margin: 10px 0;
-    }
-
-    #menu a {
-        padding: 12px;
-    }
-
-    h2 {
-        font-size: 1.5rem; /* Уменьшаем размер заголовка на мобильных устройствах */
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
