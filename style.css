@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
 
 body {
@@ -99,5 +99,21 @@ img {
 @media screen and (max-width: 480px) {
     #projects div {
         width: 95%; /* Еще больше уменьшаем ширину блоков */
+    }
+
+    #menu ul {
+        flex-direction: column; /* Меню становится вертикальным на мобильных устройствах */
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+
+    #menu a {
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Уменьшаем размер заголовка на мобильных устройствах */
     }
 }
