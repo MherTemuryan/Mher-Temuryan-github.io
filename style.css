@@ -14,19 +14,19 @@ body {
     background-color: gray;
     height: 60px;
     display: flex;
-    justify-content: center; /* Центрируем меню */
-    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center;
+    align-items: center;
 }
 
 ul {
-    display: flex; /* Горизонтальное расположение пунктов меню */
+    display: flex;
     padding: 0;
     margin: 0;
 }
 
 ul li {
     list-style-type: none;
-    margin: 0 15px; /* Отступы между пунктами меню */
+    margin: 0 15px;
 }
 
 #menu a {
@@ -36,13 +36,13 @@ ul li {
     text-align: center;
     color: cyan;
     font-weight: bold;
-    border-radius: 5px; /* Скругление углов для кнопок меню */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #menu a:hover {
-    background-color: cyan; /* Цвет фона при наведении */
-    color: black; /* Цвет текста при наведении */
+    background-color: cyan;
+    color: black;
 }
 
 h2 {
@@ -65,9 +65,14 @@ img {
     position: relative;
 }
 
+#projects {
+    display: flex;
+    flex-wrap: wrap; /* Делаем так, чтобы блоки не выходили за пределы */
+    justify-content: center; /* Центрируем блоки */
+}
+
 #projects div {
     border: 1px solid #b8bdd4;
-    display: inline-block;
     width: 300px;
     height: 210px;
     margin: 15px;
@@ -76,4 +81,22 @@ img {
 
 #contacts a {
     text-decoration: none;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media screen and (max-width: 768px) {
+    #projects {
+        flex-direction: column; /* Блоки становятся вертикальными на мобильных устройствах */
+    }
+
+    #projects div {
+        width: 80%; /* Уменьшаем ширину блоков */
+        margin: 10px auto; /* Центрируем блоки */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #projects div {
+        width: 90%; /* Еще больше уменьшаем ширину блоков */
+    }
 }
